@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('radiostation', function () {
+    return view('radiostation');
+});
+
+Route::controllers([
+    'epg' => 'EpgController'
+]);
