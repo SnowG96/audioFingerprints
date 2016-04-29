@@ -20,7 +20,7 @@
             <div class="input-group">
                 <input type="text" name="q" class="form-control" placeholder="搜索..."/>
               <span class="input-group-btn">
-                <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                <button type='submit' name='search' id='search-btn' class="btn btn-flat"></button>
               </span>
             </div>
         </form>
@@ -30,13 +30,13 @@
         <ul class="sidebar-menu">
             <li class="header">功能</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>主页</span></a></li>
-            <li><a href="{{ url('radiostation') }}"><i class='fa fa-link'></i> <span>电台</span></a></li>
+            <li><a href="{{ url('home') }}"><span>主页</span></a></li>
+            <li><a href="{{ url('radiostation/show') }}"><span>电台管理</span></a></li>
             <li class="treeview">
-                <a href="#"><i class='fa fa-link'></i> <span>节目单管理</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="{{ url('epgmanage')}}"><span>节目单管理</span></a>
                 <ul class="treeview-menu">
-                    <li><a href="#">上传节目预告</a></li>
-                    <li><a href="#">检索节目单</a></li>
+                    <li><a href="{{ url('advnotice/new') }}">节目预告</a></li>
+                    <li><a href="{{url('fingerprint/new')}}">检索节目单</a></li>
                 </ul>
             </li>
         </ul><!-- /.sidebar-menu -->

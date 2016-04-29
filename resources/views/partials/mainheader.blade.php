@@ -11,10 +11,6 @@
 
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
-        <!-- Sidebar toggle button-->
-        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-
-        </a>
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
@@ -33,24 +29,18 @@
                             <img src="/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
                             <p>
                                 {{ Auth::user()->name }}
-                                <small>Member since Nov. 2012</small>
+                                <small>管理员</small>
                             </p>
                         </li>
                         <!-- Menu Footer-->
                         <li class="user-footer">
-                            <div class="pull-left">
-                                <a href="#" class="btn btn-default btn-flat">Profile</a>
-                            </div>
                             <div class="pull-right">
-                                <a href="{{ url('/auth/logout') }}" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="{{ url('/auth/logout') }}" class="btn btn-default btn-flat">注销</a>
                             </div>
                         </li>
                     </ul>
                 </li>
                 <!-- Control Sidebar Toggle Button -->
-                <li>
-                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                </li>
             </ul>
         </div>
     </nav>

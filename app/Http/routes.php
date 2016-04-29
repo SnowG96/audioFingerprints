@@ -14,10 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('radiostation', function () {
-    return view('radiostation');
-});
 
+//Route::get('radiostation','RadioStationController@index');
+Route::get('/epgmanage',function(){
+   return view('epgmanage');
+});
 Route::controllers([
-    'epg' => 'EpgController'
+    'radiostation'=>'RadioStationController',
+    'advnotice' => 'RadioAdvanceNoticeController',
+    'fingerprint' => 'FingerprintNoticeController'
 ]);

@@ -9,9 +9,9 @@ class CreateRadioAdvanceNoticeTable extends Migration {
 	{
 		Schema::create('radioAdvanceNotice', function(Blueprint $table) {
 			$table->increments('id');
-			$table->timestamps();
 			$table->integer('radio_id');
-			$table->integer('advanceNotice_id');
+			$table->integer('advnotice_id');
+			$table->timestamps();
 		});
 	}
 

@@ -3,19 +3,20 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateEpgTable extends Migration {
+class CreateRadioProgramTable extends Migration {
 
 	public function up()
 	{
-		Schema::create('epg', function(Blueprint $table) {
+		Schema::create('radioProgram', function(Blueprint $table) {
 			$table->increments('id');
+			$table->integer('radio_id');
+			$table->integer('program_id');
 			$table->timestamps();
-			$table->text('programGuide');
 		});
 	}
 
 	public function down()
 	{
-		Schema::drop('epg');
+		Schema::drop('radioProgram');
 	}
 }
